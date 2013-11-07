@@ -1,16 +1,18 @@
 package com.codepath.apps.simpletwitterclient;
 
-import com.codepath.apps.simpletwitterclient.fragments.HomeTimelineFragment;
-import com.codepath.apps.simpletwitterclient.fragments.MentionsFragment;
-
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.ActionBar.TabListener;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.Menu;
+import android.view.MenuItem;
+
+import com.codepath.apps.simpletwitterclient.fragments.HomeTimelineFragment;
+import com.codepath.apps.simpletwitterclient.fragments.MentionsFragment;
 
 public class TweetsActivity extends FragmentActivity implements TabListener {
     @Override
@@ -38,6 +40,10 @@ public class TweetsActivity extends FragmentActivity implements TabListener {
 		actionBar.selectTab(tabHome);
 	}
 
+    public void onProfileView(MenuItem mi) {
+    	Intent i = new Intent(this, ProfileActivity.class);
+    	startActivity(i);
+    }
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

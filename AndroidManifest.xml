@@ -47,6 +47,10 @@
             android:name="com.codepath.apps.simpletwitterclient.TweetsActivity"
             android:label="@string/title_activity_tweets" >
         </activity>
+        <activity
+            android:name="com.codepath.apps.simpletwitterclient.ProfileActivity"
+            android:label="@string/title_activity_profile" >
+        </activity>
     </application>
 
 </manifest>
